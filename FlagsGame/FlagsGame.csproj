@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E93E0B5-D7AE-4B21-B0E8-5F266468BA02}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlagsGame</RootNamespace>
+    <AssemblyName>FlagsGame</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Country.cs" />
+    <Compile Include="GameCountryFlag.xaml.cs">
+      <DependentUpon>GameCountryFlag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameFlagCountry.xaml.cs">
+      <DependentUpon>GameFlagCountry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuContinents.xaml.cs">
+      <DependentUpon>MenuContinents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Result.xaml.cs">
+      <DependentUpon>Result.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results.xaml.cs">
+      <DependentUpon>Results.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Configuration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameCountryFlag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameFlagCountry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration.xaml.cs">
+      <DependentUpon>Configuration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MenuContinents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Play.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Result.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Play.xaml.cs">
+      <DependentUpon>Play.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="FlagsGameData.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FlagsGameData_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>FlagsGameData.mdf</DependentUpon>
+    </Content>
+    <Resource Include="images\Afghanistan.png" />
+    <Resource Include="images\Albania.png" />
+    <Resource Include="images\Algeria.png" />
+    <Resource Include="images\Andorra.png" />
+    <Resource Include="images\Antigua-and-Barbuda.png" />
+    <Resource Include="images\Argentina.png" />
+    <Resource Include="images\Armenia.png" />
+    <Resource Include="images\Australia.png" />
+    <Resource Include="images\Austria.png" />
+    <Resource Include="images\Azerbaijan.png" />
+    <Resource Include="images\Bahamas.png" />
+    <Resource Include="images\Bahrain.png" />
+    <Resource Include="images\Bangladesh.png" />
+    <Resource Include="images\Barbados.png" />
+    <Resource Include="images\Belarus.png" />
+    <Resource Include="images\Belgium.png" />
+    <Resource Include="images\Belize.png" />
+    <Resource Include="images\Benin.png" />
+    <Resource Include="images\Bhutan.png" />
+    <Resource Include="images\Bolivia.png" />
+    <Resource Include="images\Bosnia-and-Herzegovina.png" />
+    <Resource Include="images\Botswana.png" />
+    <Resource Include="images\Brazil.png" />
+    <Resource Include="images\Brunei.png" />
+    <Resource Include="images\Bulgaria.png" />
+    <Resource Include="images\Burkina-Faso.png" />
+    <Resource Include="images\Burundi.png" />
+    <Resource Include="images\Cambodia.png" />
+    <Resource Include="images\Cameroon.png" />
+    <Resource Include="images\Canada.png" />
+    <Resource Include="images\Cape-Verde.png" />
+    <Resource Include="images\Central-African-Republic.png" />
+    <Resource Include="images\Chad.png" />
+    <Resource Include="images\Chile.png" />
+    <Resource Include="images\China.png" />
+    <Resource Include="images\Colombia.png" />
+    <Resource Include="images\Comoros.png" />
+    <Resource Include="images\Congo-%28Democratic%29.png" />
+    <Resource Include="images\Congo-%28Republic%29.png" />
+    <Resource Include="images\Costa-Rica.png" />
+    <Resource Include="images\Cote-d%27Ivoire.png" />
+    <Resource Include="images\Croatia.png" />
+    <Resource Include="images\Cuba.png" />
+    <Resource Include="images\Cyprus.png" />
+    <Resource Include="images\Czech-Republic.png" />
+    <Resource Include="images\Denmark.png" />
+    <Resource Include="images\Djibouti.png" />
+    <Resource Include="images\Dominica.png" />
+    <Resource Include="images\Dominican-Republic.png" />
+    <Resource Include="images\East-Timor.png" />
+    <Resource Include="images\Ecuador.png" />
+    <Resource Include="images\Egypt.png" />
+    <Resource Include="images\El-Salvador.png" />
+    <Resource Include="images\Equatorial-Guinea.png" />
+    <Resource Include="images\Eritrea.png" />
+    <Resource Include="images\Estonia.png" />
+    <Resource Include="images\Ethiopia.png" />
+    <Resource Include="images\Fiji.png" />
+    <Resource Include="images\Finland.png" />
+    <Resource Include="images\France.png" />
+    <Resource Include="images\Gabon.png" />
+    <Resource Include="images\Gambia.png" />
+    <Resource Include="images\Georgia.png" />
+    <Resource Include="images\Germany.png" />
+    <Resource Include="images\Ghana.png" />
+    <Resource Include="images\Grecee.png" />
+    <Resource Include="images\Grenada.png" />
+    <Resource Include="images\Guatemala.png" />
+    <Resource Include="images\Guinea-Bissau.png" />
+    <Resource Include="images\Guinea.png" />
+    <Resource Include="images\Guyana.png" />
+    <Resource Include="images\Haiti.png" />
+    <Resource Include="images\Honduras.png" />
+    <Resource Include="images\Hungary.png" />
+    <Resource Include="images\Iceland.png" />
+    <Resource Include="images\India.png" />
+    <Resource Include="images\Indonesia.png" />
+    <Resource Include="images\Iran.png" />
+    <Resource Include="images\Iraq.png" />
+    <Resource Include="images\Ireland.png" />
+    <Resource Include="images\Israel.png" />
+    <Resource Include="images\Italy.png" />
+    <Resource Include="images\Jamaica.png" />
+    <Resource Include="images\Japan.png" />
+    <Resource Include="images\Jordan.png" />
+    <Resource Include="images\Kazakhstan.png" />
+    <Resource Include="images\Kenya.png" />
+    <Resource Include="images\Kiribati.png" />
+    <Resource Include="images\Korea,-North.png" />
+    <Resource Include="images\Korea,-South.png" />
+    <Resource Include="images\Kosovo.png" />
+    <Resource Include="images\Kuwait.png" />
+    <Resource Include="images\Kyrgyzstan.png" />
+    <Resource Include="images\Laos.png" />
+    <Resource Include="images\Latvia.png" />
+    <Resource Include="images\Lebanon.png" />
+    <Resource Include="images\Lesotho.png" />
+    <Resource Include="images\Liberia.png" />
+    <Resource Include="images\Libya.png" />
+    <Resource Include="images\Liechtenstein.png" />
+    <Resource Include="images\Lithuania.png" />
+    <Resource Include="images\Luxembourg.png" />
+    <Resource Include="images\Macedonia.png" />
+    <Resource Include="images\Madagascar.png" />
+    <Resource Include="images\Malawi.png" />
+    <Resource Include="images\Malaysia.png" />
+    <Resource Include="images\Maldives.png" />
+    <Resource Include="images\Mali.png" />
+    <Resource Include="images\Malta.png" />
+    <Resource Include="images\Marshall-Islands.png" />
+    <Resource Include="images\Mauritania.png" />
+    <Resource Include="images\Mauritius.png" />
+    <Resource Include="images\Mexico.png" />
+    <Resource Include="images\Micronesia-%28Federated%29.png" />
+    <Resource Include="images\Moldova.png" />
+    <Resource Include="images\Monaco.png" />
+    <Resource Include="images\Mongolia.png" />
+    <Resource Include="images\Montenegro.png" />
+    <Resource Include="images\Morocco.png" />
+    <Resource Include="images\Mozambique.png" />
+    <Resource Include="images\Myanmar.png" />
+    <Resource Include="images\Namibia.png" />
+    <Resource Include="images\Nauru.png" />
+    <Resource Include="images\Nepal.png" />
+    <Resource Include="images\Netherlands.png" />
+    <Resource Include="images\New-Zealand.png" />
+    <Resource Include="images\Nicaragua.png" />
+    <Resource Include="images\Niger.png" />
+    <Resource Include="images\Nigeria.png" />
+    <Resource Include="images\Norway.png" />
+    <Resource Include="images\Oman.png" />
+    <Resource Include="images\Pakistan.png" />
+    <Resource Include="images\Palau.png" />
+    <Resource Include="images\Panama.png" />
+    <Resource Include="images\Papua-New-Guinea.png" />
+    <Resource Include="images\Paraguay.png" />
+    <Resource Include="images\Peru.png" />
+    <Resource Include="images\Philippines.png" />
+    <Resource Include="images\Poland.png" />
+    <Resource Include="images\Portugal.png" />
+    <Resource Include="images\Qatar.png" />
+    <Resource Include="images\Romania.png" />
+    <Resource Include="images\Russia.png" />
+    <Resource Include="images\Rwanda.png" />
+    <Resource Include="images\Saint-Kitts-and-Nevis.png" />
+    <Resource Include="images\Saint-Lucia.png" />
+    <Resource Include="images\Saint-Vincent-and-the-Grenadines.png" />
+    <Resource Include="images\Samoa.png" />
+    <Resource Include="images\San-Marino.png" />
+    <Resource Include="images\Sao-Tome-and-Principe.png" />
+    <Resource Include="images\Saudi-Arabia.png" />
+    <Resource Include="images\Senegal.png" />
+    <Resource Include="images\Serbia.png" />
+    <Resource Include="images\Seychelles.png" />
+    <Resource Include="images\Sierra-Leone.png" />
+    <Resource Include="images\Singapore.png" />
+    <Resource Include="images\Slovakia.png" />
+    <Resource Include="images\Slovenia.png" />
+    <Resource Include="images\Solomon-Islands.png" />
+    <Resource Include="images\Somalia.png" />
+    <Resource Include="images\South-Africa.png" />
+    <Resource Include="images\South-Sudan.png" />
+    <Resource Include="images\Spain.png" />
+    <Resource Include="images\Sri-Lanka.png" />
+    <Resource Include="images\Sudan.png" />
+    <Resource Include="images\Suriname.png" />
+    <Resource Include="images\Swaziland.png" />
+    <Resource Include="images\Sweden.png" />
+    <Resource Include="images\Switzerland.png" />
+    <Resource Include="images\Syria.png" />
+    <Resource Include="images\Taiwan.png" />
+    <Resource Include="images\Tajikistan.png" />
+    <Resource Include="images\Tanzania.png" />
+    <Resource Include="images\Thailand.png" />
+    <Resource Include="images\Togo.png" />
+    <Resource Include="images\Tonga.png" />
+    <Resource Include="images\Trinidad-and-Tobago.png" />
+    <Resource Include="images\Tunisia.png" />
+    <Resource Include="images\Turkey.png" />
+    <Resource Include="images\Turkmenistan.png" />
+    <Resource Include="images\Tuvalu.png" />
+    <Resource Include="images\Uganda.png" />
+    <Resource Include="images\Ukraine.png" />
+    <Resource Include="images\United-Arab-Emirates.png" />
+    <Resource Include="images\United-Kingdom.png" />
+    <Resource Include="images\United-States-of-America.png" />
+    <Resource Include="images\Uruguay.png" />
+    <Resource Include="images\Uzbekistan.png" />
+    <Resource Include="images\Vanuatu.png" />
+    <Resource Include="images\Vatican-City.png" />
+    <Resource Include="images\Venezuela.png" />
+    <Resource Include="images\Vietnam.png" />
+    <Resource Include="images\Yemen.png" />
+    <Resource Include="images\Zambia.png" />
+    <Resource Include="images\Zimbabwe.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

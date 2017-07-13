@@ -1,0 +1,20 @@
+﻿<Window x:Class="FlagsGame.Play"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlagsGame"
+        mc:Ignorable="d"
+         Title="MainWindow" Height="350" Width="400">
+    <Grid Background="#448AFF" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Margin="15" Background="#9C27B0" FontWeight="DemiBold" FontSize="35"  Click="Btn_competition" Foreground="White">COMPETITION</Button>
+        <Button Grid.Row="1" Margin="15" Background="#9C27B0" FontWeight="DemiBold" FontSize="35" Click="Btn_training" Foreground="White" >TRAINING</Button>
+        <Button Grid.Row="2" Margin="15" Background="#9C27B0" FontWeight="DemiBold" FontSize="35" Click="Btn_back" Foreground="White" >BACK</Button>
+    </Grid>
+</Window>
